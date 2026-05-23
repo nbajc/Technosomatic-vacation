@@ -102,4 +102,547 @@ section{padding:5rem 2.5rem}
 .tags{display:flex;flex-wrap:wrap;gap:.35rem}
 .tag{font-family:var(--ff-mono);font-size:.58rem;letter-spacing:.03em;padding:.28rem .6rem;border:0.5px solid var(--border2);color:var(--muted)}
 .tag.art{border-color:rgba(181,97,42,.4);color:var(--accent)}
-.tag
+.tag.star{border-color:rgba(168,132,47,.5);color:var(--accent2);background:rgba(168,132,47,.08)}
+.tag.move{border-color:var(--border);color:var(--subtle)}
+
+/* INSTITUTIONS */
+.inst-section-title{font-family:var(--ff-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem}
+.inst-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.6rem;margin-bottom:3rem}
+.inst-card{background:var(--paper);border:0.5px solid var(--border);padding:1.3rem;display:flex;flex-direction:column;gap:.5rem;transition:border-color .2s,transform .2s;position:relative}
+.inst-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.inst-card a{position:absolute;inset:0;z-index:1}
+.inst-accent{width:30px;height:3px;margin-bottom:.3rem}
+.inst-name{font-size:.84rem;font-weight:500;color:var(--text);line-height:1.3}
+.inst-show{font-size:.76rem;font-style:italic;color:var(--muted);line-height:1.45;flex:1;font-family:var(--ff-display)}
+.inst-link-icon{font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;color:var(--subtle);margin-top:auto;display:flex;align-items:center;gap:.3rem}
+.inst-link-icon::after{content:'↗';font-size:.8rem}
+
+/* ACCOM */
+.accom{background:var(--paper);border-left:3px solid var(--accent);padding:1.6rem 2rem;margin-bottom:3rem;border-top:0.5px solid var(--border);border-right:0.5px solid var(--border);border-bottom:0.5px solid var(--border)}
+.accom-title{font-family:var(--ff-mono);font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.accom-body{font-size:.85rem;line-height:1.85;color:var(--muted)}
+.accom-body strong{color:var(--text);font-weight:500}
+
+/* CTA BUTTONS */
+.stay-btn{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--ff-mono);font-size:.64rem;letter-spacing:.07em;text-transform:uppercase;padding:.5rem .95rem;border:0.5px solid var(--border2);color:var(--muted);transition:border-color .25s,color .25s,background .25s;cursor:pointer;text-decoration:none;margin-top:.7rem;margin-right:.4rem;background:var(--bg)}
+.stay-btn:hover{color:var(--text)}
+.stay-btn.airbnb{border-color:rgba(214,73,55,.45);color:#c0492f}
+.stay-btn.airbnb:hover{background:#d6493715;border-color:#c0492f}
+.stay-btn.vrbo{border-color:rgba(30,110,170,.45);color:#1d6fa8}
+.stay-btn.vrbo:hover{background:#1d6fa815;border-color:#1d6fa8}
+.stay-btn.beach{border-color:rgba(47,100,112,.5);color:var(--blue);background:rgba(250,248,241,.9)}
+.stay-btn.beach:hover{background:var(--blue);color:var(--paper);border-color:var(--blue)}
+
+/* CROATIA */
+.croatia-bg{background:#eef0e9}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:3rem}
+.loc-card-img{position:relative;height:320px;overflow:hidden;background:var(--bg3);border:0.5px solid var(--border)}
+.loc-card-img .img-fill{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s ease;background-color:#1a1c1e}
+.loc-card-img:hover .img-fill{transform:scale(1.04)}
+.loc-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,12,8,.92) 32%,rgba(14,12,8,.15) 100%)}
+.loc-text{position:absolute;bottom:0;left:0;right:0;padding:1.5rem;z-index:3}
+.loc-tag-label{font-family:var(--ff-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:#d99a5a;margin-bottom:.3rem}
+.loc-name-big{font-family:var(--ff-display);font-size:1.7rem;font-weight:300;font-style:italic;color:#f4ede0;line-height:1.1;margin-bottom:.4rem}
+.loc-desc-small{font-size:.79rem;color:rgba(244,237,224,.72);line-height:1.6}
+.zoom-tag{position:absolute;top:.8rem;right:.8rem;z-index:4;font-family:var(--ff-mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,237,224,.6);border:0.5px solid rgba(244,237,224,.3);padding:.2rem .5rem;background:rgba(14,12,8,.4);pointer-events:none}
+
+/* MOTOVUN */
+.motovun-block{background:var(--paper);border:0.5px solid var(--border2);padding:2rem;margin-bottom:2.5rem}
+.motovun-inner{display:grid;grid-template-columns:3fr 4fr;gap:2.2rem;align-items:stretch}
+.motovun-tag{font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+.motovun-title{font-family:var(--ff-display);font-size:2rem;font-weight:300;font-style:italic;margin-bottom:.5rem}
+.motovun-body{font-size:.84rem;color:var(--muted);line-height:1.85}
+.motovun-img{min-height:340px;background-size:cover;background-position:center;background-color:var(--bg3);position:relative;border:0.5px solid var(--border)}
+
+/* KORNATI */
+.kornati-section{background:#e6ede9;padding:4.5rem 2.5rem}
+.kornati-header{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-bottom:2.5rem}
+.kornati-title{font-family:var(--ff-display);font-size:clamp(2rem,4vw,3rem);font-weight:300;font-style:italic;color:var(--text);line-height:1.1}
+.kornati-subtitle{font-size:.83rem;color:var(--muted);line-height:1.85}
+.kornati-banner{height:380px;background-size:cover;background-position:center;margin-bottom:2rem;border:0.5px solid var(--border);position:relative;background-color:var(--bg3)}
+.route-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-bottom:2rem}
+.route-day{background:var(--paper);border:0.5px solid rgba(47,100,112,.28);padding:1.2rem;transition:transform .2s}
+.route-day:hover{transform:translateY(-2px)}
+.route-n{font-family:var(--ff-display);font-size:1.9rem;font-weight:300;font-style:italic;color:var(--blue);margin-bottom:.3rem}
+.route-place{font-size:.84rem;font-weight:500;color:var(--text);margin-bottom:.2rem}
+.route-note{font-size:.74rem;color:var(--muted);line-height:1.5}
+.kornati-notes{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.5rem}
+.k-note{background:var(--paper);border:0.5px solid var(--border);padding:1rem 1.1rem;font-size:.78rem;color:var(--muted);line-height:1.6}
+.k-note strong{display:block;font-family:var(--ff-mono);color:var(--blue);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.4rem;font-weight:500}
+
+/* FOOTER */
+footer{padding:3rem 2.5rem;border-top:0.5px solid var(--border2);background:var(--paper);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.footer-left{display:flex;align-items:center;gap:1rem}
+.footer-logo{height:42px;width:auto;mix-blend-mode:multiply;opacity:.85}
+.footer-title{font-family:var(--ff-display);font-style:italic;font-size:1.15rem;color:var(--muted)}
+.footer-meta{font-family:var(--ff-mono);font-size:.66rem;letter-spacing:.05em;color:var(--subtle)}
+
+.rule{border:none;border-top:0.5px solid var(--border);margin:0}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;z-index:2000;background:rgba(18,16,11,.93);display:none;align-items:center;justify-content:center;cursor:zoom-out;padding:4vh 4vw}
+.lightbox.open{display:flex}
+.lightbox img{max-width:92vw;max-height:90vh;object-fit:contain;box-shadow:0 30px 90px rgba(0,0,0,.55)}
+.lightbox-close{position:absolute;top:1.3rem;right:1.6rem;width:42px;height:42px;border:0.5px solid rgba(242,239,229,.4);color:#f2efe5;font-size:1.3rem;display:flex;align-items:center;justify-content:center;cursor:pointer;background:rgba(0,0,0,.3);transition:background .2s}
+.lightbox-close:hover{background:rgba(0,0,0,.6)}
+.lightbox-hint{position:absolute;bottom:1.4rem;left:0;right:0;text-align:center;font-family:var(--ff-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(242,239,229,.45)}
+
+@media(max-width:768px){
+  .phase-strip,.spotlight,.kornati-header,.loc-grid,.kornati-notes,.motovun-inner,.route-grid{grid-template-columns:1fr}
+  .day{grid-template-columns:58px 1fr}
+  .hero-title{font-size:3rem}
+  nav{padding:.6rem 1.2rem}
+  .nav-links{gap:1rem}
+  section,footer,.kornati-section{padding:3rem 1.2rem}
+  .hero{padding:6rem 1.2rem 4rem}
+  .inst-grid{grid-template-columns:1fr 1fr}
+  .spotlight-divider{width:100%;height:1px}
+  .motovun-img{min-height:240px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <img class="nav-logo" src="technosomatic-logo.png" alt="Technosomatic">
+    <div class="nav-title">Venice · Istria · Kornati</div>
+  </div>
+  <div class="nav-links">
+    <a href="#venice">Biennale</a>
+    <a href="#istria">Istria</a>
+    <a href="#kornati">Kornati</a>
+    <a href="#trogir">Trogir</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-noise"></div>
+  <div class="hero-content">
+    <img class="hero-logo" src="technosomatic-logo.png" alt="The Technosomatic Architecture">
+    <div class="hero-sys">
+      <div>SYSTEM ONLINE</div>
+      <div>SUBJECT: <b>Venice + Adriatic</b></div>
+      <div>LOC: Venezia · Istria · Dalmatia</div>
+      <div>STATUS: <b>Itinerary — Summer 2026</b></div>
+    </div>
+    <h1 class="hero-title">
+      Venice<br>
+      <em>&amp;</em> the<br>
+      Adriatic
+    </h1>
+    <div class="hero-subtitle">
+      <span>61st Biennale Arte</span>
+      <span>Istria &amp; Kornati</span>
+      <span>Art · Sea · Stone</span>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE STRIP -->
+<div class="phase-strip">
+  <div class="phase-card">
+    <div class="phase-tag venice">Phase I</div>
+    <div class="phase-name">Venice</div>
+    <div class="phase-meta">5 days · Arrive Monday evening<br>61st Biennale Arte · <em>In Minor Keys</em><br>All major fondazioni · Marina Abramović</div>
+  </div>
+  <div class="phase-card">
+    <div class="phase-tag adriatic">Phase II</div>
+    <div class="phase-name">Adriatic</div>
+    <div class="phase-meta">10 days · Treviso · Udine · Istria<br>Rovinj · Motovun · down to Dalmatia<br>2 days sailing Kornati · ending in Trogir</div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<!-- VENICE -->
+<section id="venice">
+  <div class="section-eyebrow" style="color:var(--accent)"><span></span>Phase I</div>
+  <div class="section-title">Venice Biennale</div>
+  <p class="section-intro">The 61st International Art Exhibition runs 9 May – 22 November 2026. Theme: <em>In Minor Keys</em>, curated by Koyo Kouoh's team after her passing — 110 artists, 100 national pavilions, 31 collateral events across the city. You have five days. This is how to use them.</p>
+
+  <div class="spotlight">
+    <div>
+      <div class="spotlight-label">★ Unmissable · Book in advance</div>
+      <div class="spotlight-name">Marina Abramović</div>
+      <div class="spotlight-show"><em>Transforming Energy</em> · Gallerie dell'Accademia · 6 May – 19 Oct 2026</div>
+      <div class="spotlight-body">
+        First living woman artist in 250 years of the Accademia's history to be given a solo exhibition. Her performance practice — crystals, quartz beds, endurance works — set in direct dialogue with Titian, Tintoretto, Veronese. The centerpiece: her 1983 <em>Pietà (with Ulay)</em> placed face to face with Titian's last painting, the <em>Pietà</em> (1575–76). Abramović first visited Venice by train from Belgrade at age 14. She cried when she saw the city. She won the Golden Lion here in 1997. This is her full-circle moment at 80.
+      </div>
+      <a class="spotlight-link" href="https://www.gallerieaccademia.it/en/transforming-energy-di-marina-abramovic" target="_blank" rel="noopener">Gallerie dell'Accademia ↗</a>
+    </div>
+    <div class="spotlight-divider"></div>
+    <div class="spotlight-detail">
+      <strong>What to activate:</strong> The Transitory Objects — quartz beds, crystal-embedded structures — are interactive. You lie, sit, or stand on them to complete what Abramović calls an "energy transmission." This is the direct-body-contact thread running through her entire practice, from the early '70s performances to now.<br><br>
+      <strong>Key works present:</strong> <em>Imponderabilia</em> (1977), <em>Rhythm 0</em> (1974), <em>Light/Dark</em> (1977), <em>Balkan Baroque</em> (1997), new works created for Venice.<br><br>
+      <strong>Practical:</strong> Timed entry required, book online. Weekends sell out. Allow 2–3 hours. The permanent collection galleries (Bellini, Carpaccio, Veronese) are worth an extra hour separately.
+    </div>
+  </div>
+
+  <div class="days-grid">
+
+    <div class="day">
+      <div class="day-num"><div class="dn">1</div><div class="dd">Tue</div></div>
+      <div class="day-body">
+        <div class="day-city">Giardini — Biennale core</div>
+        <div class="day-desc">Full day at the Giardini. Central Pavilion (just restored, newly redesigned) then the national pavilions. 29 pavilions in the historic garden complex. British pavilion: Lubaina Himid <em>Predicting History: Testing Translation</em>. First-time debuts: Sierra Leone, Vietnam, Qatar. Give it the whole day — it deserves it.</div>
+        <div class="tags"><span class="tag art">Giardini all day</span><span class="tag art">Central Pavilion</span><span class="tag art">100+ national pavilions</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num"><div class="dn">2</div><div class="dd">Wed</div></div>
+      <div class="day-body">
+        <div class="day-city">Arsenale + Punta della Dogana</div>
+        <div class="day-desc">The Arsenale alone is a full-day venue — 300 meters of former rope factory, now exhibition space on a scale unlike anything else. Don't rush. Afternoon: walk to Dorsoduro. Pinault Collection at Punta della Dogana: Lorna Simpson <em>Third Person</em> and Paulo Nazareth with previously unseen works from the Pinault collection. Evening: Zattere waterfront, sunset over Giudecca.</div>
+        <div class="tags"><span class="tag art">Arsenale</span><span class="tag star">Punta della Dogana</span><span class="tag art">Lorna Simpson</span><span class="tag art">Paulo Nazareth</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num"><div class="dn">3</div><div class="dd">Thu</div></div>
+      <div class="day-body">
+        <div class="day-city">Abramović + Palazzo Grassi</div>
+        <div class="day-desc">The axis of the trip. Morning at the Gallerie dell'Accademia — arrive when it opens, book timed entry in advance. Give it 3 hours minimum. Then Palazzo Grassi (Pinault's other Venice venue): Michael Armitage — 45 paintings, 100+ studies of brutal uncompromising figuration — and Amar Kanwar. Dinner in Dorsoduro.</div>
+        <div class="tags"><span class="tag star">★ Accademia — Abramović</span><span class="tag art">Palazzo Grassi — Armitage</span><span class="tag art">Amar Kanwar</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num"><div class="dn">4</div><div class="dd">Fri</div></div>
+      <div class="day-body">
+        <div class="day-city">Fondazione Prada + Cannaregio</div>
+        <div class="day-desc">Ca' Corner della Regina on the Grand Canal: <em>Helter Skelter</em> — Arthur Jafa and Richard Prince in direct dialogue on American image culture, curated by Nancy Spector. Currently the most critically acclaimed show in Venice — the talk of the entire Biennale. Then cross to Cannaregio: Anish Kapoor retrospective at Palazzo Manfrin (closes 8 August — don't delay). Ca' Pesaro for Jenny Saville.</div>
+        <div class="tags"><span class="tag star">Fondazione Prada — Helter Skelter</span><span class="tag art">Palazzo Manfrin — Kapoor</span><span class="tag art">Ca' Pesaro — Jenny Saville</span></div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-num"><div class="dn">5</div><div class="dd">Sat</div></div>
+      <div class="day-body">
+        <div class="day-city">San Giorgio + Querini + departure</div>
+        <div class="day-desc">Vaporetto to San Giorgio Maggiore — Fondazione Cini in its remarkable island complex (Palladio's refectory, Longhena's library). Back by noon: Fondazione Querini Stampalia — Thomas De Falco's large-scale textile installation with performers enveloped in gold. Carlo Scarpa's Olivetti Showroom in Piazza San Marco. Late afternoon toward Treviso.</div>
+        <div class="tags"><span class="tag art">Fondazione Cini — island</span><span class="tag art">Querini Stampalia</span><span class="tag art">Carlo Scarpa · Olivetti Showroom</span><span class="tag move">→ Treviso 30 min</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="inst-section-title">All venues · click to visit</div>
+  <div class="inst-grid">
+
+    <div class="inst-card">
+      <a href="https://www.labiennale.org/en/art/2026" target="_blank" rel="noopener"></a>
+      <div class="inst-accent" style="background:#9B2335"></div>
+      <div class="inst-name">La Biennale di Venezia</div>
+      <div class="inst-show">In Minor Keys · Giardini + Arsenale · 9 May – 22 Nov</div>
+      <div class="inst-link-icon">labiennale.org</div>
+    </div>
+
+    <div class="inst-card">
+      <a href="https://www.gallerieaccademia.it/en/transforming-energy-di-marina-abramovic" target="_blank" rel="noopener"></a>
+      <div class="inst-accent" style="background:#7A4C8C"></div>
+      <div class="inst-name">Gallerie dell'Accademia</div>
+      <div class="inst-show">Marina Abramović · Transforming Energy · 6 May – 19 Oct</div>
+      <div class="inst-link-icon">gallerieaccademia.it</div>
+    </div>
+
+    <div class="inst-card">
+      <a href="https://www.guggenheim-venice.it" target="_blank" rel="noopener"></a>
+      <div class="inst-accent" style="background:#2A5F5A"></div>
+      <div class="inst-name">Peggy Guggenheim Collection</div>
+      <div class="inst-show">Peggy Guggenheim in London: The Making of a Collector</div>
+      <div class="inst-link-icon">guggenheim-venice.it</div>
+    </div>
+
+    <div class="inst-card">
+      <a href="https://www.fondazioneprada.org" target="_blank" rel="noopener"></a>
+      <div class="inst-accent" style="background:#A8842F"></div>
+      <div class="inst-name">Fondazione Prada Venice</div>
+      <div class="inst-show">Helter Skelter · Arthur Jafa &amp; Richard Prince · 9 May – 23 Nov</div>
+      <div class="inst-link-icon">fondazioneprada.org</div>
+    </div>
+
+    <div class="inst-card">
+      <a href="https://www.palazzograssi.it" target="_blank" rel="noopener"></a>
+      <div class="inst-accent" style="background:#2A4A7A"></div>
+      <div class="inst-name">Palazzo Grassi</div>
+      <div class="inst-show">Michael Armitage · Amar Kanwar · Pinault Collection</div>
+      <div class="inst-link-icon">palazzograssi.it</div>
+    </div>
+
+    <div class="inst-card">
+      <a href="https://www.palazzograssi.it/en/exhibitions/punta-della-dogana/" target="_blank" rel="noopener"></a>
+      <div class="inst-accent" style="background:#2F6470"></div>
+      <div class="inst-name">Punta della Dogana</div>
+      <div class="inst-show">Lorna Simpson Third Person · Paulo Nazareth · Pinault</div>
+      <div class="inst-link-icon">palazzograssi.it</div>
+    </div>
+
+    <div class="inst-card">
+      <a href="https://capesaro.visitmuve.it" target="_blank" rel="noopener"></a>
+      <div class="inst-accent" style="background:#B5612A"></div>
+      <div class="inst-name">Ca' Pesaro</div>
+      <div class="inst-show">Jenny Saville · Hernan Bas · International Gallery of Modern Art</div>
+      <div class="inst-link-icon">capesaro.visitmuve.it</div>
+    </div>
+
+    <div class="inst-card">
+      <a href="https://www.querinistampalia.org" target="_blank" rel="noopener"></a>
+      <div class="inst-accent" style="background:#83851F"></div>
+      <div class="inst-name">Fondazione Querini Stampalia</div>
+      <div class="inst-show">Thomas De Falco · Fragile Forces W · Textile + performance</div>
+      <div class="inst-link-icon">querinistampalia.org</div>
+    </div>
+
+    <div class="inst-card">
+      <a href="https://www.cini.it" target="_blank" rel="noopener"></a>
+      <div class="inst-accent" style="background:#6A4A2A"></div>
+      <div class="inst-name">Fondazione Giorgio Cini</div>
+      <div class="inst-show">San Giorgio Maggiore island · Palladio's refectory · Longhena library</div>
+      <div class="inst-link-icon">cini.it</div>
+    </div>
+
+    <div class="inst-card">
+      <a href="https://www.palazzomanfrin.com" target="_blank" rel="noopener"></a>
+      <div class="inst-accent" style="background:#3A3A6A"></div>
+      <div class="inst-name">Palazzo Manfrin · Cannaregio</div>
+      <div class="inst-show">Anish Kapoor retrospective · Closes 8 August 2026</div>
+      <div class="inst-link-icon">palazzomanfrin.com</div>
+    </div>
+
+  </div>
+
+  <div class="accom">
+    <div class="accom-title">Where to stay · VRBO / Airbnb</div>
+    <div class="accom-body">
+      <strong>Cannaregio</strong> is the call for this itinerary. Authentic residential sestiere, furthest from the tourist corridor. Canal-facing apartments on Fondamenta della Misericordia or Rio della Sensa. Walking distance to Palazzo Manfrin (Kapoor). 10-minute vaporetto to Arsenale and Giardini, 15 minutes to Dorsoduro. Search: "Venice Cannaregio canal view apartment" — look for piano nobile with exposed beams or terrace. Avoid anything on Lista di Spagna (tourist trap). <strong>Alternative:</strong> Castello near Via Garibaldi puts you closest to the Biennale venues on foot. Campo San Polo (San Polo sestiere) is more Rialto-central but requires more vaporetto time to reach the Biennale.
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem">
+      <a class="stay-btn airbnb" href="https://www.airbnb.com/wishlists/invite/ff0083e7-341a-4297-907f-bf499f760813?s=67&unique_share_id=3043dc05-155e-4671-96c1-4a02dd09eb5e" target="_blank" rel="noopener">Airbnb · Stay Venice ↗</a>
+      <a class="stay-btn vrbo" href="https://vrbo.onelink.me/ItNz/tyg1atgt" target="_blank" rel="noopener">VRBO · Stay Venice ↗</a>
+    </div>
+  </div>
+
+</section>
+
+<hr class="rule">
+
+<!-- ADRIATIC -->
+<section id="istria" class="croatia-bg" style="padding-bottom:1rem">
+  <div class="section-eyebrow" style="color:var(--blue)"><span></span>Phase II</div>
+  <div class="section-title">Istria &amp; Dalmatia</div>
+  <p class="section-intro">From Venice, drive east. The geography flows naturally: Treviso → Udine → cross the border into Istria → drive south through Croatia to Dalmatia, the Kornati archipelago, and the island town of Trogir. Ten days, five distinct worlds.</p>
+
+  <div class="loc-grid">
+
+    <div class="loc-card-img" id="card-treviso">
+      <div class="img-fill" id="img-treviso"></div>
+      <div class="loc-overlay"></div>
+      <div class="zoom-tag">⤢ Click to enlarge</div>
+      <div class="loc-text">
+        <div class="loc-tag-label">Day 6 · 30 min from Venice</div>
+        <div class="loc-name-big">Treviso</div>
+        <div class="loc-desc-small">Medieval walled city with canals running through it. Tomaso da Modena frescoes at Santa Caterina. Prosecco country. Excellent aperitivo. One night before Udine.</div>
+      </div>
+    </div>
+
+    <div class="loc-card-img" id="card-udine">
+      <div class="img-fill" id="img-udine"></div>
+      <div class="loc-overlay"></div>
+      <div class="zoom-tag">⤢ Click to enlarge</div>
+      <div class="loc-text">
+        <div class="loc-tag-label">Day 7 · 1 hr from Treviso</div>
+        <div class="loc-name-big">Udine</div>
+        <div class="loc-desc-small">Friuli capital. Piazza della Libertà with Sansovino loggia and Venetian lion. Tiepolo frescoes at the Oratorio della Purità. Frico, cjarsons, Friulano wine. Gateway to Croatia.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="loc-grid">
+
+    <div class="loc-card-img" style="height:420px" id="card-rovinj">
+      <div class="img-fill" id="img-rovinj" style="background-image:url('rovinj.jpg')"></div>
+      <div class="loc-overlay"></div>
+      <div class="zoom-tag">⤢ Click to enlarge</div>
+      <div class="loc-text">
+        <div class="loc-tag-label">Days 8–10 · 2.5 hrs from Udine · Istria</div>
+        <div class="loc-name-big">Rovinj</div>
+        <div class="loc-desc-small">Terracotta old town on a peninsula — the most beautiful town on the Adriatic. St. Euphemia's church on the summit. Artist studios and small galleries threading the cobbled streets. This is an artist's town: come for the light, the colour, the slow mornings. Kayak the harbour, take a batana boat at golden hour, dinner at Konoba Veli Jože or Monte (Michelin starred).</div>
+        <a class="stay-btn beach" href="https://www.tripadvisor.com/Hotel_Feature-g303833-d1137826-zft9156-Valalta_Naturist_Camp.html" target="_blank" rel="noopener">Valalta Naturist · Nudist Beach ↗</a>
+      </div>
+    </div>
+
+    <div class="loc-card-img" style="height:420px" id="card-rovinj-sunset">
+      <div class="img-fill" id="img-rovinj-sunset" style="background-image:url('Rovinj-Rovigno.jpg')"></div>
+      <div class="loc-overlay"></div>
+      <div class="zoom-tag">⤢ Click to enlarge</div>
+      <div class="loc-text">
+        <div class="loc-tag-label">Golden hour</div>
+        <div class="loc-name-big">The Riva at Dusk</div>
+        <div class="loc-desc-small">The waterfront at sunset, St. Euphemia's tower catching the last light. This is when Rovinj is at its most cinematic — an aperitivo on the rocks, the sky turning over the Adriatic.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MOTOVUN -->
+<section style="padding-top:0;padding-bottom:2rem" class="croatia-bg">
+  <div class="motovun-block">
+    <div class="motovun-inner">
+      <div>
+        <div class="motovun-tag">Inland Istria · 50 min from Rovinj</div>
+        <div class="motovun-title">Motovun</div>
+        <div class="motovun-body">
+          One of the great hilltop towns of Europe. Venetian walls crowning a forested ridge above the Mirna River valley — the view from the ramparts reaches the Adriatic on clear days. Medieval streets with almost no cars. The surrounding oak forests produce some of the world's finest white truffles; the Zigante truffle house in nearby Livade is worth the detour. The Motovun Film Festival happens in late July if your dates align. Drive it as a half-day from Rovinj or stay a night inside the walls — best at dawn, when the fog pools in the valley below and the town floats above it.
+        </div>
+        <a class="stay-btn vrbo" href="https://vrbo.onelink.me/ItNz/tyg1atgt" target="_blank" rel="noopener" style="margin-top:.9rem">VRBO · Stay Motovun ↗</a>
+      </div>
+      <div class="motovun-img zoomable" id="img-motovun" style="background-image:url('motovun.png')">
+        <div class="zoom-tag">⤢ Click to enlarge</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- KORNATI -->
+<div class="kornati-section" id="kornati">
+  <div class="kornati-header">
+    <div>
+      <div class="section-eyebrow" style="color:var(--blue);margin-bottom:1rem"><span></span>Days 12–13</div>
+      <div class="kornati-title">Kornati<br>Archipelago</div>
+      <p style="font-family:var(--ff-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-top:.8rem">149 islands · 2 days sailing · total solitude</p>
+    </div>
+    <div class="kornati-subtitle">
+      The largest and densest archipelago in the Mediterranean. 149 islands, islets, and reefs — almost entirely uninhabited. Pale limestone cliffs rising from deep blue water. No noise. No road traffic. The occasional small tavern where fishermen grill fish caught that morning. George Bernard Shaw allegedly said God created the Kornati from tears, stars, and spirit on the last day of creation. He wasn't wrong. Two days is enough for the essential loop — the core islands and Telašćica — before continuing south to Trogir. Charter from Šibenik. Buy the National Park permit online in advance.
+    </div>
+  </div>
+
+  <div class="kornati-banner zoomable" id="img-kornati" style="background-image:url('kornati.png')">
+    <div class="zoom-tag">⤢ Click to enlarge</div>
+  </div>
+
+  <div class="route-grid" style="grid-template-columns:1fr 1fr">
+    <div class="route-day">
+      <div class="route-n">1</div>
+      <div class="route-place">Šibenik → core Kornati</div>
+      <div class="route-note">Sail into the archipelago · anchor at Lavsa's turquoise lagoon · swimming, snorkeling the reef · konoba dinner at anchor</div>
+    </div>
+    <div class="route-day">
+      <div class="route-n">2</div>
+      <div class="route-place">Telašćica → return</div>
+      <div class="route-note">Morning at the dramatic cliff faces and salt lake Mir · sail back toward Šibenik, then drive south to Trogir</div>
+    </div>
+  </div>
+
+  <div class="kornati-notes">
+    <div class="k-note"><strong>Charter logistics</strong>For a 2-day sail, a skippered day-charter or short overnight charter from Šibenik works best. Skipper hire: €150–200/day — worth it to focus on the islands, not navigation. Bareboat possible if licensed (Croatian VHF cert).</div>
+    <div class="k-note"><strong>National Park permit</strong>Required for the Kornati zone. Buy online at kornati.hr in advance — significantly cheaper than from park rangers on the water. Priced per vessel length and per day.</div>
+    <div class="k-note"><strong>When to go</strong>May–September. June is ideal — maestral wind in the afternoons, calm mornings for swimming. The islands have almost no services — stock provisions in Šibenik before departure.</div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<!-- TROGIR -->
+<section id="trogir" class="croatia-bg">
+  <div class="section-eyebrow" style="color:var(--blue)"><span></span>Days 14–15</div>
+  <div class="section-title">Trogir</div>
+  <p class="section-intro">The journey ends on a tiny island town between the mainland and the island of Čiovo — a UNESCO World Heritage core of Venetian and Romanesque stone, walkable end to end in fifteen minutes. Trogir sits 30 minutes from Split airport: the natural place to close the trip before flying home.</p>
+
+  <div class="loc-grid">
+
+    <div class="loc-card-img" style="height:400px" id="card-trogir">
+      <div class="img-fill" id="img-trogir"></div>
+      <div class="loc-overlay"></div>
+      <div class="zoom-tag">⤢ Click to enlarge</div>
+      <div class="loc-text">
+        <div class="loc-tag-label">Day 14 · the old town</div>
+        <div class="loc-name-big">Trogir Old Town</div>
+        <div class="loc-desc-small">2,300 years of continuous habitation on one small island. The Cathedral of St. Lawrence with Radovan's Portal — the masterwork of 13th-century Croatian Romanesque sculpture. Kamerlengo fortress at the harbour. Marble streets, Venetian palazzi, evening passeggiata along the riva. Konoba dinners on hidden courtyards.</div>
+      </div>
+    </div>
+
+    <div class="loc-card-img" style="height:400px" id="card-bluelagoon">
+      <div class="img-fill" id="img-bluelagoon" style="background-image:url('trogir-bluelagoon.png')"></div>
+      <div class="loc-overlay"></div>
+      <div class="zoom-tag">⤢ Click to enlarge</div>
+      <div class="loc-text">
+        <div class="loc-tag-label">Day 15 · by boat from Trogir</div>
+        <div class="loc-name-big">Blue Lagoon &amp; Blue Cave</div>
+        <div class="loc-desc-small">The Blue Lagoon — shallow turquoise water between the Drvenik islands, glassy and luminous, perfect for swimming and snorkeling. Longer excursions from the Trogir–Split coast reach the famous Blue Cave at Biševo, where midday light floods the chamber and turns the water electric blue. A fitting final image: stone, sea, and impossible colour.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <img class="footer-logo" src="technosomatic-logo.png" alt="Technosomatic Architecture">
+    <div class="footer-title">Venice · Istria · Kornati · 2026</div>
+  </div>
+  <div class="footer-meta">15 days · art &amp; sea · Natasha Bajc</div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-close">&times;</div>
+  <img id="lightbox-img" src="" alt="Enlarged view">
+  <div class="lightbox-hint">Click anywhere to close · Esc</div>
+</div>
+
+<script>
+async function loadWikiImg(pageTitle, elemId) {
+  try {
+    const r = await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(pageTitle));
+    if (!r.ok) return;
+    const d = await r.json();
+    const src = d.originalimage?.source || d.thumbnail?.source;
+    if (!src) return;
+    const big = src.replace(/\/\d+px-/, '/1400px-');
+    const el = document.getElementById(elemId);
+    if (el) el.style.backgroundImage = 'url(' + big + ')';
+  } catch(e) {}
+}
+[
+  ['Treviso', 'img-treviso'],
+  ['Udine', 'img-udine'],
+  ['Trogir', 'img-trogir'],
+].forEach(([t, id]) => loadWikiImg(t, id));
+
+/* LIGHTBOX */
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightbox-img');
+function bgUrl(el) {
+  if (!el) return null;
+  const m = getComputedStyle(el).backgroundImage.match(/url\(["']?(.+?)["']?\)/);
+  return m ? m[1] : null;
+}
+function openLB(src) { if (!src) return; lbImg.src = src; lb.classList.add('open'); }
+function closeLB() { lb.classList.remove('open'); }
+lb.addEventListener('click', closeLB);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
+
+document.querySelectorAll('.loc-card-img').forEach(card => {
+  card.style.cursor = 'zoom-in';
+  card.addEventListener('click', e => {
+    if (e.target.closest('a')) return;
+    openLB(bgUrl(card.querySelector('.img-fill')));
+  });
+});
+document.querySelectorAll('.zoomable').forEach(el => {
+  el.style.cursor = 'zoom-in';
+  el.addEventListener('click', () => openLB(bgUrl(el)));
+});
+</script>
+
+</body>
+</html>
