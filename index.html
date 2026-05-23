@@ -148,6 +148,16 @@ section{padding:5rem 2.5rem}
 .k-note{background:rgba(255,255,255,.03);border:0.5px solid var(--border);padding:1rem;font-size:.78rem;color:rgba(237,230,216,.55);line-height:1.6}
 .k-note strong{display:block;color:var(--blue2);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.3rem;font-weight:400}
 
+/* CTA BUTTONS */
+.stay-btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:.45rem .9rem;border:0.5px solid var(--border2);color:var(--muted);transition:border-color .25s,color .25s;cursor:pointer;text-decoration:none;margin-top:.7rem;margin-right:.4rem}
+.stay-btn:hover{color:var(--text)}
+.stay-btn.airbnb{border-color:rgba(255,90,60,.35);color:rgba(255,110,70,.75)}
+.stay-btn.airbnb:hover{border-color:rgba(255,90,60,.7);color:rgba(255,100,70,.95)}
+.stay-btn.vrbo{border-color:rgba(0,145,255,.3);color:rgba(80,170,255,.7)}
+.stay-btn.vrbo:hover{border-color:rgba(0,145,255,.65);color:rgba(100,185,255,.95)}
+.stay-btn.beach{border-color:rgba(42,107,138,.4);color:rgba(70,160,190,.8)}
+.stay-btn.beach:hover{border-color:rgba(42,107,138,.8);color:#5bc0e0}
+.loc-text{position:relative;z-index:3}
 /* FOOTER */
 footer{padding:3rem 2.5rem;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-title{font-family:var(--ff-display);font-style:italic;font-size:1.1rem;color:var(--muted)}
@@ -383,6 +393,10 @@ footer{padding:3rem 2.5rem;border-top:0.5px solid var(--border);display:flex;jus
     <div class="accom-body">
       <strong>Cannaregio</strong> is the call for this itinerary. Authentic residential sestiere, furthest from the tourist corridor. Canal-facing apartments on Fondamenta della Misericordia or Rio della Sensa. Walking distance to Palazzo Manfrin (Kapoor). 10-minute vaporetto to Arsenale and Giardini, 15 minutes to Dorsoduro. Search: "Venice Cannaregio canal view apartment" — look for piano nobile with exposed beams or terrace. Avoid anything on Lista di Spagna (tourist trap). <strong>Alternative:</strong> Castello near Via Garibaldi puts you closest to the Biennale venues on foot. Campo San Polo (San Polo sestiere) is more Rialto-central but requires more vaporetto time to reach the Biennale.
     </div>
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem">
+      <a class="stay-btn airbnb" href="https://www.airbnb.com/wishlists/invite/ff0083e7-341a-4297-907f-bf499f760813?s=67&unique_share_id=3043dc05-155e-4671-96c1-4a02dd09eb5e" target="_blank" rel="noopener">Airbnb · Stay Venice ↗</a>
+      <a class="stay-btn vrbo" href="https://vrbo.onelink.me/ItNz/tyg1atgt" target="_blank" rel="noopener">VRBO · Stay Venice ↗</a>
+    </div>
   </div>
 
 </section>
@@ -422,12 +436,13 @@ footer{padding:3rem 2.5rem;border-top:0.5px solid var(--border);display:flex;jus
   <div class="loc-grid">
 
     <div class="loc-card-img" style="height:380px" id="card-rovinj">
-      <div class="img-fill" id="img-rovinj" style="background-color:#141820"></div>
+      <div class="img-fill" id="img-rovinj" style="background-image:url('Rovinj-Rovigno.jpg');background-color:#141820"></div>
       <div class="loc-overlay"></div>
       <div class="loc-text">
         <div class="loc-tag-label">Days 8–10 · 2.5 hrs from Udine · Istria</div>
         <div class="loc-name-big">Rovinj</div>
         <div class="loc-desc-small">Terracotta old town on a peninsula — the most beautiful town on the Adriatic. St. Euphemia's church on the summit. Artist studios and small galleries in the cobbled streets. This is an artist's town. Day-trip to Pula (Roman Arena, Temple of Augustus, 40 min). Dinner at Konoba Veli Jože or Monte (Michelin starred).</div>
+        <a class="stay-btn beach" href="https://www.tripadvisor.com/Hotel_Feature-g303833-d1137826-zft9156-Valalta_Naturist_Camp.html" target="_blank" rel="noopener">Valalta Naturist · Nudist Beach ↗</a>
       </div>
     </div>
 
@@ -454,6 +469,7 @@ footer{padding:3rem 2.5rem;border-top:0.5px solid var(--border);display:flex;jus
         <div class="motovun-body">
           One of the great hilltop towns of Europe. Venetian walls crowning a forested ridge above the Mirna River valley — the view from the ramparts reaches the Adriatic on clear days. Medieval streets with almost no cars. The surrounding oak forests produce some of the world's finest white truffles; the Zigante truffle house in nearby Livade is worth the detour. The Motovun Film Festival happens in late July if your dates align. Drive it as a half-day from Rovinj or stay a night at the small hotel within the walls. Either way: go.
         </div>
+        <a class="stay-btn vrbo" href="https://vrbo.onelink.me/ItNz/tyg1atgt" target="_blank" rel="noopener" style="margin-top:.9rem">VRBO · Stay Motovun ↗</a>
       </div>
       <div class="motovun-img" id="img-motovun"></div>
     </div>
@@ -558,7 +574,6 @@ async function loadWikiImg(pageTitle, elemId, isDiv) {
 const locations = [
   ['Treviso', 'img-treviso'],
   ['Udine', 'img-udine'],
-  ['Rovinj', 'img-rovinj'],
   ['Pula', 'img-pula'],
   ['Motovun', 'img-motovun'],
   ['Šibenik', 'img-sibenik'],
